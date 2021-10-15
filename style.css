@@ -1,0 +1,225 @@
+@import url("https://necolas.github.io/normalize.css/latest/normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+/*-------------------------------------------------*
+* Variables
+*/
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+/*-------------------------------------------------*
+* Base Styles
+*/
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.body--bg {
+  background-color: var(--violet);
+}
+
+.text--center {
+  text-align: center;
+}
+
+.font--white {
+  color: white;
+}
+
+.header {
+  margin: 2em 0 3em 1em;
+}
+
+.header__logo {
+  max-width: 40%;
+  height: auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2em;
+  margin: 3em 0;
+}
+
+.main__illustration {
+  margin-bottom: 2.5em;
+}
+
+.illustration--responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__content {
+  margin-bottom: 4em;
+}
+
+.main__content h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.button {
+  text-align: center;
+  width: 220px;
+  height: 50px;
+  margin: 2em auto 0em auto;
+}
+
+.button a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.button--style1 {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.button--style1,
+.fab {
+  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 300ms;
+  -moz-transition: ease-in-out 300ms;
+  -ms-transition: ease-in-out 300ms;
+  -o-transition: ease-in-out 300ms;
+}
+
+.button--style1:hover {
+  background-color: var(--soft-magenta);
+}
+
+.button--style1 a:hover {
+  color: white;
+}
+
+.button--style1 a {
+  color: var(--violet);
+  text-decoration: none;
+}
+
+.button--style1,
+.button--style1 a {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.main__social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.85em;
+}
+
+.fab {
+  color: white;
+  border: 1px solid white;
+  padding: 0.45em;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.fab:hover {
+  color: var(--soft-magenta);
+  border: 1px solid var(--soft-magenta);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: white;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/*-------------------------------------------------*
+* Mobile
+*/
+@media screen and (min-width: 376px) and (max-width: 1079px) {
+  .main__content {
+    width: 60%;
+    height: auto;
+  }
+}
+
+/*-------------------------------------------------*
+* Desktop
+*/
+@media screen and (min-width: 1080px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+  }
+  .text--center {
+    text-align: left;
+  }
+
+  .header {
+    margin-top: 2em;
+  }
+
+  .main__illustration {
+    width: 100%;
+    height: auto;
+  }
+
+  .main__content {
+    transform: translateX(-2em);
+    width: 70%;
+    height: auto;
+    -webkit-transform: translateX(-2em);
+    -moz-transform: translateX(-2em);
+    -ms-transform: translateX(-2em);
+    -o-transform: translateX(-2em);
+  }
+
+  .main__content h1 {
+    font-size: 2.5em;
+  }
+
+  .main__social {
+    transform: translate(15em, 5em);
+    -webkit-transform: translate(15em, 5em);
+    -moz-transform: translate(15em, 5em);
+    -ms-transform: translate(15em, 5em);
+    -o-transform: translate(15em, 5em);
+  }
+
+  .button {
+    margin: 2.5em 0 0 0;
+  }
+}
